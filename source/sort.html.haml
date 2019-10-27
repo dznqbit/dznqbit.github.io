@@ -1,36 +1,32 @@
-- content_for :body_classes, '-dark -fullBleed'
+- content_for :body_classes, '-fullBleed'
 - content_for :head do
+  = javascript_include_tag 'https://use.fontawesome.com/ae0cfaae2d.js'
   = javascript_include_tag 'sort.bundle'
   = stylesheet_link_tag 'sort.bundle'
 
 .container
   #app
+    %header.shuttle
+      %select{ :'v-model' => 'algorithmName', :'v-on:change' => 'selectAlgorithm(algorithmName)' }
+        %option{ 'disabled' => true, 'value' => false } choose
+        %option{ :'v-for' => 'algorithm in algorithmNames', :'v-bind:value' => 'algorithm' }{{algorithm}}
+      %button{ :'v-on:click' => 'reset()'           } reset
+      %button{ :'v-on:click' => 'firstFrame()'      } &lt;&lt;
+      %button{ :'v-on:click' => 'prevFrame()'       } &lt;
+      %button{ :'v-on:click' => 'togglePlayback()'  } {{ isPlaying ? 'stop' : 'play' }}
+      %button{ :'v-on:click' => 'nextFrame()'       } &gt;
+      %button{ :'v-on:click' => 'lastFrame()'       } &gt;&gt;
+
     %dl.stats
-      %dt Algorithm
-      %dd {{ algorithm_name }}
-      %dt List Length
+      %dt Frame
+      %dd {{ frameIndex }}
+      %dt N
       %dd {{ values.length }}
       %dt Comparisons
-      %dd {{ comparisons }}
+      %dd {{ numComparisons }}
       %dt Swaps
-      %dd {{ swaps }}
+      %dd {{ numSwaps }}
 
     %ul.list
       %li.__entry{ :'v-for' => "v in values" }
         .value{ 'v-bind:class' => "{ '-current': v.current, '-compared': v.compared, '-f0': v.flag0, '-f1': v.flag1, '-f2': v.flag2 }", 'v-bind:style' => "{ height: v.value + 'px' }" } {{ v.value }}
-
-    %ul.buttons
-      %li
-        %button.button.-newList{ :'v-on:click' => 'newList()' } randomize
-      %li
-        %button.button.-bubbleSort{ :'v-on:click' => 'bubbleSort()' } bubblesort
-      %li
-        %button.button.-bubbleSort{ :'v-on:click' => 'insertionSort()' } insertionsort
-      %li
-        %button.button.-bubbleSort{ :'v-on:click' => 'selectionSort()' } selectionsort
-      %li
-        %button.button.-bubbleSort{ :'v-on:click' => 'mergeSort()' } mergesort
-      %li
-        %button.button.-bubbleSort{ :'v-on:click' => 'quicksortLomuto()', disabled: 'disabled' } quicksort (Lomuto)
-      %li
-        %button.button.-bubbleSort{ :'v-on:click' => 'quicksortHoare()', disabled: 'disabled' } quicksort (Hoare)
