@@ -1,2 +1,2 @@
 # dznqbit.github.io
-The new, new, new dznqbit.com, lol
+It's dznqbit.com for the millionth time! This time using Jekyll with the Minimalist theme.
