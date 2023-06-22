@@ -1,0 +1,35 @@
+---
+---
+
+blockquote {
+    font-style: normal;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+h2 + h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 + h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media print {
+    .sidebar, .sidebar-footer, footer, hr {
+        display: none;
+    }
+
+    h1, h2, h3, h4, h5, strong {
+        font-weight: normal;
+    }
+    body {
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 8pt;
+    }
+    
+ }
