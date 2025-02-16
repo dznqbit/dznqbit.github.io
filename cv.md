@@ -19,6 +19,8 @@ Outside of work, I enjoy playing music, building experimental tools with Arduino
 #### Senior Principal Software Engineer
 _February 2023 - Present_
 
+> **J&J Gaming**: Tech lead on a large (10-15) team building a complete loyalty program from scratch. React Native, Vite/React, .NET backend, Azure cloud hosting.
+
 > **Troon/ClubUp Tech Lead**: Tech lead on a team of 6 developers on an infrastructure rehabilitation for an outdated Rails backend. Story writing, backlog grooming, code reviews, lots of pairing. Rails version upgrades, AWS infrastructure management via Terraform, load testing via Grafana k6.
 
 In addition to contract work, I've been conducting tech skill assessment interviews, and acting as career advisor to four advisees.
