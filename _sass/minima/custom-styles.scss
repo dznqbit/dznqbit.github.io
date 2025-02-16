@@ -13,24 +13,34 @@ strong {
 }
 
 .site-footer {
-  .contact-list {
-    li {
-      padding: 5px 0;
+  li {
+    padding: 5px 0;
+    list-style-type: none;
 
-      .u-github {
-        background: url('/assets/img/github-mark.png') no-repeat left center;
+    .u-github {
+      background: url('/assets/img/github-mark.png') no-repeat left center;
+      background-size: contain;
+      padding-left: 25px;
+
+      @media (prefers-color-scheme: dark) {
+        background: url('/assets/img/github-mark-white.png') no-repeat left center;
         background-size: contain;
-        padding-left: 25px;
+      }
+    }
 
-        @media (prefers-color-scheme: dark) {
-          background: url('/assets/img/github-mark-white.png') no-repeat left center;
-          background-size: contain;
-        }
+    .u-linkedin {
+      background: url('/assets/img/InBug-Black.png') no-repeat left center;
+      background-size: contain;
+      padding-left: 25px;
+
+      @media (prefers-color-scheme: dark) {
+        background: url('/assets/img/InBug-White.png') no-repeat left center;
+        background-size: contain;
       }
     }
   }
 
-  .p-about {
+  ul.rhs li {
     text-align: right;
   }
 }
