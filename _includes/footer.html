@@ -1,0 +1,29 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ '/' | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        {%- if site.author %}
+          <ul class="contact-list">
+            {% if site.author.name -%}
+              <li class="p-name">{{ site.author.name | escape }}</li>
+            {% endif -%}
+            {% if site.author.email -%}
+              <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            {%- endif %}
+            {% if site.author.github -%}
+              <li><a class="u-github" href="{{ site.author.github | prepend: 'https://github.com/' }}">{{ site.author.github }}</a></li>
+            {% endif -%}
+          </ul>
+        {%- endif %}
+      </div>
+      <div class="footer-col">
+        <p class="p-about">
+          Rants by yours truly. 2025 dznqbit.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

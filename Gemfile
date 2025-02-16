@@ -3,6 +3,9 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "github-pages", "~> 227", group: :jekyll_plugins
+gem "jekyll-remote-theme"
 
-gem "webrick", "~> 1.7"
+gem "github-pages", "~> 231", group: :jekyll_plugins
+gem "webrick"
+
+gem "unf", "~> 0.1.4"

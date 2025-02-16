@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Comic Sans Mono';
+  src: url('/assets/fonts/ComicMono.ttf');
+}
+
+.site-footer {
+  .contact-list {
+    li {
+      padding: 5px 0;
+
+      .u-github {
+        background: url('/assets/img/github-mark.png') no-repeat left center;
+        background-size: contain;
+        padding-left: 25px;
+
+        @media (prefers-color-scheme: dark) {
+          background: url('/assets/img/github-mark-white.png') no-repeat left center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  .p-about {
+    text-align: right;
+  }
+}
