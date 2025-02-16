@@ -3,6 +3,15 @@
   src: url('/assets/fonts/ComicMono.ttf');
 }
 
+@font-face {
+  font-family: 'Comic Sans Mono Bold';
+  src: url('/assets/fonts/ComicMono-Bold.ttf');
+}
+
+strong {
+  font-family: 'Comic Sans Mono Bold', monospace;
+}
+
 .site-footer {
   .contact-list {
     li {

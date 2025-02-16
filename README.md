@@ -7,3 +7,6 @@ jekyll serve --livereload
 ```
 
 ## Deployment
+```
+git push
+```
